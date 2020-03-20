@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Code:400,700&display=swap");
+
+:root {
+  --primary-color: #ff5252;
+  --secendary-color: #40407a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Fira Code", monospace;
+  background: #f4f4f4;
+}
+
+/* utility class */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  padding: 10px;
+}
+
+.logo h1 {
+  font-family: inherit;
+  color: var(--secendary-color);
+  font-weight: 700;
+}
+
+.f-icon-color {
+  color: #eb3b5a;
+}
+
+.f-text-color {
+  color: #4b6584;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+  color: #333;
+  cursor: pointer;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Hide #navbar ul li ul */
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#navbar ul li:hover a {
+  color: #fff;
+}
+
+/* Show */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 230px;
+  margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background: #e7e7e7;
+}
+
+#navbar ul li:hover ul li a {
+  color: #333;
+}
+
+#navbar ul li:hover ul li:hover {
+  background: #e0e0e0;
+  color: inherit;
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#navbar ul li:hover ul li:hover span {
+  background: var(--secendary-color);
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  height: 400px;
+  text-align: center;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+  color: #fff;
+}
